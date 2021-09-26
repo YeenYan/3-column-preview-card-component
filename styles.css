@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+
+    /*for paragraph*/
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+
+    /*for background, headings, buttons*/
+    --very-light-gray: hsl(0, 0%, 95%);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: var(--very-light-gray);
+}
+
+/*============ Typography Starts Here ===============*/
+
+.col__header {
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: var(--very-light-gray);
+}
+
+.col__text,
+.col__cta {
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.col__text {
+    font-size: .94rem;
+    color: var(--transparent-white);
+}
+
+.sedan__cta {
+    color: var(--bright-orange);
+}
+
+.suv__cta {
+    color: var(--dark-cyan);
+}
+
+.luxury__cta {
+    color: var(--very-dark-cyan);
+}
+
+/*============ Typography Ends Here ===============*/
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+}
+
+.card {
+    display: flex;
+    flex-wrap: wrap;
+
+    width: 90%;
+    max-width: 1000px;
+    margin: 3rem auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.col {
+    padding: 1rem 3rem;
+}
+
+.col__img,
+.col__text{
+    margin: 1.5rem 0;
+}
+
+.col__cta {
+    display: inline-block;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.sedan__row {
+    background-color: var(--bright-orange);
+}
+
+.suv__row {
+    background-color: var(--dark-cyan);
+}
+
+.luxury__row {
+    background-color: var(--very-dark-cyan);
+}
+
+.col__cta {
+    text-decoration: none;
+    background-color: var(--very-light-gray);
+    padding: .5rem 1.5em;
+    border-radius: 50px;
+}
+
+
+@media (min-width: 800px) {
+
+    .card {
+        display: flex;
+    }
+
+    .col {
+        flex: 1;
+        flex-basis: 30%;
+    }
+
+    .col__text {
+        min-height: 150px;
+    }
+
+}
